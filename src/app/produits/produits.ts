@@ -1,6 +1,7 @@
 // Importation des modules nécessaires d'Angular
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Produit } from '../model/produit.model';
 
 // Déclaration du composant Produits
 @Component({
@@ -10,12 +11,20 @@ import { CommonModule } from '@angular/common';
   templateUrl: './produits.html',   // Chemin du template HTML du composant
   styleUrl: './produits.css'        // Chemin du fichier de styles CSS du composant
 })
-export class Produits {
-  // Tableau contenant la liste des produits
-  produits : string [];
+export class Produits implements OnInit {
+  // Tableau de produits
+  produits : Produit [];
 
   // Constructeur du composant : initialise la liste des produits
   constructor() {
-    this.produits = ['ASUS', 'Imprimante HP', 'Smartphone Samsung', 'Smartphone Iphone'];
-  }
+this.produits = [
+{idProduit : 1, nomProduit : "PC Asus", prixProduit : 3000.600, dateCreation : new Date("01/14/2011")},
+{idProduit : 2, nomProduit : "Imprimante Epson", prixProduit : 450, dateCreation : new Date("12/17/2010")},
+{idProduit : 3, nomProduit :"Tablette Samsung", prixProduit : 900.123, dateCreation : new Date("02/20/2020")}
+ ];
+ }
+
+ ngOnInit(): void {
+     
+ }
 }
