@@ -25,7 +25,10 @@ export class Produits implements OnInit {
 // {idProduit : 3, nomProduit :"Tablette Samsung", prixProduit : 900.123, dateCreation : new Date("02/20/2020")}
 //  ];
  }
-
+supprimerProduit(p: Produit)
+{
+console.log(p);
+}
  ngOnInit(): void {
      
  }
