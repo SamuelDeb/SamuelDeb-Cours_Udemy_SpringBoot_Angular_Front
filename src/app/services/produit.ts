@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Produit } from '../model/produit.model';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // Le service est disponible dans toute l'application
 })
 export class ProduitService {
-  produits: Produit[];
+  produits: Produit[]; // Tableau pour stocker les produits
 
   constructor() {
     this.produits = [
@@ -22,10 +22,10 @@ export class ProduitService {
 
   }
   listeProduits(): Produit[] {
-    return this.produits;
+    return this.produits; // Récupération de la liste des produits
   }
 
   ajouterProduit(prod: Produit) {
-    this.produits.push(prod);
+    this.produits.push(prod); // Ajout d'un nouveau produit à la liste
   }
 }
