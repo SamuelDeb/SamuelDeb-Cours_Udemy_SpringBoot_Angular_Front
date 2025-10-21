@@ -28,6 +28,9 @@ export class Produits implements OnInit {
 supprimerProduit(p: Produit)
 {
 console.log(p);
+let conf = confirm("Etes-vous sûr ?");
+if (conf)
+  this.produitService.supprimerProduit(p);
 }
  ngOnInit(): void {
      
